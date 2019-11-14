@@ -1,13 +1,13 @@
 # GitHub Action: Run vimlint with reviewdog
 
-<!---
-[![Docker Image CI](https://github.com/reviewdog/action-vint/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/reviewdog/action-vint/actions)
-[![Release](https://img.shields.io/github/release/reviewdog/action-vint.svg?maxAge=43200)](https://github.com/reviewdog/action-vint/releases)
--->
+[![Docker Image CI](https://github.com/tsuyoshicho/action-vimlint/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/tsuyoshicho/action-vimlint/actions)
+[![Release](https://img.shields.io/github/release/tsuyoshicho/action-vimlint.svg?maxAge=43200)](https://github.com/tsuyoshicho/action-vimlint/releases)
 
 This action runs [vim-vimlint](https://github.com/syngan/vim-vimlint) with
 [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve
 code review experience.
+
+based on [reviewdog/action-vint](https://github.com/reviewdog/action-vint)
 
 <!---
 [![github-pr-check example](https://user-images.githubusercontent.com/3797062/65413404-57887a00-de2c-11e9-8f45-0729808b1c29.png)](https://github.com/reviewdog/action-vint/pull/1)
