@@ -2,6 +2,9 @@ name: 'Run vimlint with reviewdog'
 description: '🐶 Run vimlint with reviewdog on pull requests to improve code review experience.'
 author: 'Tsuyoshi CHO <Tsuyoshi.CHO+develop@Gmail.com>'
 inputs:
+  target:
+    description: 'vimlint test target directory'
+    default: 'autoload'
   github_token:
     description: 'GITHUB_TOKEN.'
     required: true
