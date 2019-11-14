@@ -1,8 +1,8 @@
 name: reviewdog
 on: [pull_request]
 jobs:
-  vint:
-    name: runner / vint
+  vimlint:
+    name: runner / vimlint
     runs-on: ubuntu-latest
     steps:
       - name: Check out code.
@@ -11,8 +11,8 @@ jobs:
         uses: tsuyoshicho/action-vimlint@master
         with:
           github_token: ${{ secrets.github_token }}
-      - name: vint-pr-review
-        uses: reviewdog/action-vint@v1
+      - name: vimlint-pr-review
+        uses: tsuyoshicho/action-vimlint@master
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review

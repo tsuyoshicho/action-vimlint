@@ -39,8 +39,8 @@ github-pr-review can use Markdown and add a link to rule page in reviewdog repor
 name: reviewdog
 on: [pull_request]
 jobs:
-  vint:
-    name: runner / vint
+  vimlint:
+    name: runner / vimlint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
