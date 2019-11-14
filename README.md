@@ -49,7 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: vimlint
-        uses: tsuyoshicho/action-vimlint@master
+        uses: tsuyoshicho/action-vimlint@v1
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review # Change reporter.
