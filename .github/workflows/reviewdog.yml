@@ -7,8 +7,8 @@ jobs:
     steps:
       - name: Check out code.
         uses: actions/checkout@v1
-      - name: vint
-        uses: reviewdog/action-vint@v1
+      - name: vimlint
+        uses: tsuyoshicho/action-vimlint@master
         with:
           github_token: ${{ secrets.github_token }}
       - name: vint-pr-review
