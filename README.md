@@ -9,10 +9,8 @@ code review experience.
 
 based on [reviewdog/action-vint](https://github.com/reviewdog/action-vint)
 
-<!---
-[![github-pr-check example](https://user-images.githubusercontent.com/3797062/65413404-57887a00-de2c-11e9-8f45-0729808b1c29.png)](https://github.com/reviewdog/action-vint/pull/1)
-[![github-pr-review example](https://user-images.githubusercontent.com/3797062/65413352-3f185f80-de2c-11e9-956e-569eeaccac5f.png)](https://github.com/reviewdog/action-vint/pull/1)
--->
+[![github-pr-check example](https://user-images.githubusercontent.com/96727/68837462-f2505700-06ff-11ea-9df6-80f508cc928a.png)](https://github.com/tsuyoshicho/action-vimlint/pull/1)
+[![github-pr-review example](https://user-images.githubusercontent.com/96727/68837468-f67c7480-06ff-11ea-9a05-2b663f771409.png)](https://github.com/tsuyoshicho/action-vimlint/pull/1)
 
 ## Inputs
 
