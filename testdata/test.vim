@@ -1,4 +1,4 @@
 
-function s:test()
-  echo "Hello from reviewdog!"
-endfunction
+while 0
+  echo "test"
+endwhile
