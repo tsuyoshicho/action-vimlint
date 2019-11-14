@@ -1,6 +1,6 @@
-name: 'Run vint with reviewdog'
-description: '🐶 Run vint with reviewdog on pull requests to improve code review experience.'
-author: 'haya14busa (reviewdog)'
+name: 'Run vimlint with reviewdog'
+description: '🐶 Run vimlint with reviewdog on pull requests to improve code review experience.'
+author: 'Tsuyoshi CHO <Tsuyoshi.CHO+develop@Gmail.com>'
 inputs:
   github_token:
     description: 'GITHUB_TOKEN.'
