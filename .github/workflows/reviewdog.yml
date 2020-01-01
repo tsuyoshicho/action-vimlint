@@ -7,10 +7,16 @@ jobs:
     steps:
       - name: Check out code.
         uses: actions/checkout@v1
-      - name: vimlint
+      - name: vimlint-github-pr-check
         uses: tsuyoshicho/action-vimlint@master
         with:
           github_token: ${{ secrets.github_token }}
+          reporter: github-pr-check
+      - name: vimlint-github-check
+        uses: tsuyoshicho/action-vimlint@master
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-check
       - name: vimlint-pr-review
         uses: tsuyoshicho/action-vimlint@master
         with:
