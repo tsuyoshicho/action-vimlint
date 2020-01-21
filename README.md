@@ -1,7 +1,7 @@
 # GitHub Action: Run vimlint with reviewdog
 
 [![Docker Image CI](https://github.com/tsuyoshicho/action-vimlint/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/tsuyoshicho/action-vimlint/actions)
-[![Release](https://img.shields.io/github/release/tsuyoshicho/action-vimlint.svg?maxAge=43200)](https://github.com/tsuyoshicho/action-vimlint/releases)
+[![Release](https://github.com/tsuyoshicho/action-vimlint/workflows/release/badge.svg)](https://github.com/tsuyoshicho/action-vimlint/releases)
 
 This action runs [vim-vimlint](https://github.com/syngan/vim-vimlint) with
 [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve
