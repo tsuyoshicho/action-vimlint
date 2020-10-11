@@ -1,4 +1,4 @@
-FROM thinca/vim:v8.2.1832
+FROM thinca/vim:v8.2.1833
 
 ENV REVIEWDOG_VERSION=v0.10.2
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
