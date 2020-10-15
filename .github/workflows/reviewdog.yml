@@ -5,8 +5,10 @@ jobs:
     name: runner / vimlint
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code.
-        uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
       - name: vimlint-github-pr-check
         uses: tsuyoshicho/action-vimlint@master
         with:
