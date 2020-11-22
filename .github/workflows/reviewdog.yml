@@ -10,17 +10,17 @@ jobs:
         with:
           submodules: true
       - name: vimlint-github-pr-check
-        uses: tsuyoshicho/action-vimlint@master
+        uses: ./
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-check
       - name: vimlint-github-check
-        uses: tsuyoshicho/action-vimlint@master
+        uses: ./
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
       - name: vimlint-pr-review
-        uses: tsuyoshicho/action-vimlint@master
+        uses: ./
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
