@@ -1,25 +1,49 @@
-name: reviewdog
-on: [pull_request]
+name: Test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 jobs:
-  vimlint:
-    name: runner / vimlint
+  test-check:
+    name: runner / vimlint (github-check)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
           submodules: true
-      - name: vimlint-github-pr-check
-        uses: ./
-        with:
-          github_token: ${{ secrets.github_token }}
-          reporter: github-pr-check
       - name: vimlint-github-check
         uses: ./
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
-      - name: vimlint-pr-review
+
+  test-pr-check:
+    if: github.event_name == 'pull_request'
+    name: runner / vimlint (github-pr-check)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: vimlint-github-check
+        uses: ./
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-check
+
+  test-pr-review:
+    if: github.event_name == 'pull_request'
+    name: runner / vimlint (github-pr-review)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: vimlint-github-pr-review
         uses: ./
         with:
           github_token: ${{ secrets.github_token }}
