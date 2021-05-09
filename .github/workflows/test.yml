@@ -18,6 +18,7 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
+          target: testdata
 
   test-pr-check:
     if: github.event_name == 'pull_request'
@@ -33,6 +34,7 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-check
+          target: testdata
 
   test-pr-review:
     if: github.event_name == 'pull_request'
@@ -48,3 +50,5 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
+          target: testdata
+
