@@ -14,16 +14,9 @@ rm -rf "${VIMLINT_PATH}" "${VIMLPARSER_PATH}"
 git clone --depth 1 https://github.com/syngan/vim-vimlint    "${VIMLINT_PATH}"
 git clone --depth 1 https://github.com/ynkdir/vim-vimlparser "${VIMLPARSER_PATH}"
 
-# vimlint:
-#   cmd: vimlint -e EVL102.l:_=1 -c func_abort=1 autoload
-#   errorformat:
-#     - "%f:%l:%c:%trror: %m"
-#     - "%f:%l:%c:%tarning: %m"
-#     - "%f:%l:%c:%m"
-
 # shellcheck disable=SC2086
 sh "${VIMLINT_PATH}/bin/vimlint.sh" -l "${VIMLINT_PATH}" -p "${VIMLPARSER_PATH}"  \
-  -e EVL102.l:_=1 -c func_abort=1 ${INPUT_TARGET}                                 \
+    ${INPUT_VIMLINT_FLAGS} ${INPUT_TARGET}                                        \
     | reviewdog -efm="%f:%l:%c:%trror: %m"                                        \
                 -efm="%f:%l:%c:%tarning: %m"                                      \
                 -efm="%f:%l:%c:%m"                                                \
