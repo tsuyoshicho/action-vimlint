@@ -31,6 +31,10 @@ inputs:
   target:
     description: 'vimlint test target directory'
     default: 'autoload'
+  vimlint_flags:
+    description: "flags and args of vimlint command. Default: '-e EVL102.l:_=1 -c func_abort=1'"
+    required: true
+    default: '-e EVL102.l:_=1 -c func_abort=1'
   tool_name:
     description: 'Tool name to use for reviewdog reporter'
     default: 'vimlint'

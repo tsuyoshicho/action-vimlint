@@ -52,6 +52,10 @@ If multi item list, use space separation.
 
 Default is autoload.
 
+### `vimlint_flags`
+
+vimlint arguments (Default: `-e EVL102.l:_=1 -c func_abort=1`)
+
 ## Example usage
 
 ### [.github/workflows/reviewdog.yml](.github/workflows/reviewdog.yml)
