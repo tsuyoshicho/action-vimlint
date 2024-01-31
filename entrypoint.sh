@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -euxo pipefail
 
 if [ -n "${GITHUB_WORKSPACE}" ] ; then
   cd "${GITHUB_WORKSPACE}" || exit 1
