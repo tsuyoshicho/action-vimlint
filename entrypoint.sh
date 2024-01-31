@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -euxo pipefail
 
 if [ -n "${GITHUB_WORKSPACE}" ] ; then
