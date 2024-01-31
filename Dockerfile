@@ -1,4 +1,4 @@
-FROM thinca/vim:latest
+FROM thinca/vim:latest-ubuntu
 
 # reviewdog
 ENV REVIEWDOG_VERSION=v0.17.0
