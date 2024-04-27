@@ -2,7 +2,7 @@
 FROM thinca/vim:latest
 
 # reviewdog
-ENV REVIEWDOG_VERSION=v0.17.2
+ENV REVIEWDOG_VERSION=v0.17.4
 
 # hadolint ignore=DL4006
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
