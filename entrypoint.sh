@@ -8,6 +8,12 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
+# setup compatibility
+fail_level="${INPUT_FAIL_LEVEL}"
+if [ "${INPUT_FAIL_LEVEL}" = "none" ] && [ "${INPUT_FAIL_ON_ERROR}" = "true" ]; then
+  fail_level="error"
+fi
+
 # setup vimlint / vimlparser
 export VIMLINT_PATH="${GITHUB_WORKSPACE}/vim-vimlint"
 export VIMLPARSER_PATH="${GITHUB_WORKSPACE}/vim-vimlparser"
@@ -24,6 +30,6 @@ sh "${VIMLINT_PATH}/bin/vimlint.sh" -l "${VIMLINT_PATH}" -p "${VIMLPARSER_PATH}"
       -name="${INPUT_TOOL_NAME}"                                                  \
       -reporter="${INPUT_REPORTER:-github-pr-review}"                             \
       -filter-mode="${INPUT_FILTER_MODE}"                                         \
-      -fail-on-error="${INPUT_FAIL_ON_ERROR}"                                     \
+      -fail-level="${fail_level}"                                                 \
       -level="${INPUT_LEVEL}"                                                     \
       ${INPUT_REVIEWDOG_FLAGS}
