@@ -1,5 +1,5 @@
 # hadolint ignore=DL3007
-FROM thinca/vim:latest@sha256:c6253ded05c9a1207079c349e9509c5c7cbc00e8c403922b540f08b21b1b0a2a
+FROM thinca/vim:latest@sha256:233a7724228c3a9b6ce0594eaa8111e2111a308c6e66e5d00ba52c707ae3802d
 
 # reviewdog
 ENV REVIEWDOG_VERSION=v0.21.0
